@@ -27,6 +27,28 @@ $.fn.meowify = function () {
 		$('#meow' + $(this).data('meower'))[0].play();
 	});
 	$('#meow').attr('id', 'meow0');
+
+	var textNodes = $("body").contents().filter(function(){
+			return (this.nodeType === 3);
+	});
+
+	//console.log(typeof textNodes);
+	//console.log(textNodes);
+
+	var img = '<img style="height:1em;margin:0 1px; margin-top:-3px;" src="img/catface.png" />';
+
+	Object.keys(textNodes).forEach(function(el){
+		console.log(textNodes[el]);
+		var html = el.textContent.replace(/\o/g, img);
+		$(this).html(html);
+	});
+
+	// $('h1, a').each(function() {
+	//     var txt = $(this).text();
+	//     var img = '<img style="height:1em;margin:0 1px; margin-top:-3px;" src="img/catface.png" />'
+	//     var html = txt.replace(/\o/g, img);
+	//     $(this).html(html);
+	// });
 };
 
 $('a').meowify();
