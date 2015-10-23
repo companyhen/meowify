@@ -55,7 +55,7 @@ $.fn.meowify = function () {
 			var img = '<img style="height:1em;margin:0 1px; margin-top:-3px;" src="img/catface.png" />'
 			if (val.textContent) {
 				var text = val.textContent;
-				var html= text.replace(/\o/g, img);
+				var html= text.replace(/\o/gi, img);
 				var replacement= document.createElement('span');
 				replacement.innerHTML= html;
 				val.parentNode.insertBefore(replacement, val);
