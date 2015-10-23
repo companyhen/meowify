@@ -13,6 +13,7 @@ function makeAudioTag() {
 $.fn.meowify = function () {
 	$('body').append(makeAudioTag());
 
+//add random audio to specified element
 	this.each(function(i){
 		if(i != 0) {
 			i = Math.floor(Math.random() * meows.length);
@@ -28,8 +29,12 @@ $.fn.meowify = function () {
 	});
 	$('#meow').attr('id', 'meow0');
 
+//replace all O's with cat o's
+
 	function makeCatImg(element) {
 		var text_nodes = [];
+
+//find all text nodes and push to above array
 		(function recursiveWalk(node){
 			if (node) {
 				node = node.firstChild;
@@ -43,57 +48,25 @@ $.fn.meowify = function () {
 				}
 			}
 		})(element);
-console.log(text_nodes)
 
+//create a new text node and replace 
 
 		$.each(text_nodes, function(index, val){
 			var img = '<img style="height:1em;margin:0 1px; margin-top:-3px;" src="img/catface.png" />'
 			if (val.textContent) {
 				var text = val.textContent;
 				var html= text.replace(/\o/g, img);
-				// console.log(val.parentElement.innerHTML)
-				// val.parentElement.innerHTML= html;
-				val.textContent= html;
-				
-				
-				// val.parentElement.replaceWith(html);
-				// val.parentElement.innerHTML = val.textContent.replace(/\o/g, img);
-				// val.textContent= val.textContent.replace(/\o/g, img)
-				// text.html(html);
-				
-				
-			}
-
-			
-		})
-			console.log(text_nodes)
-			
-	}
+				var replacement= document.createElement('span');
+				replacement.innerHTML= html;
+				val.parentNode.insertBefore(replacement, val);
+				val.parentNode.removeChild(val);
+			}			
+		});
+	};
 
 	makeCatImg(document.body);
 
 
-	// var textNodes = $("body").contents().filter(function(){
-	// 		return (this.nodeType === 3);
-	// });
-
-	//console.log(typeof textNodes);
-	//console.log(textNodes);
-
-	var img = '<img style="height:1em;margin:0 1px; margin-top:-3px;" src="img/catface.png" />';
-
-	// Object.keys(textNodes).forEach(function(el){
-	// 	console.log(textNodes[el]);
-	// 	var html = el.textContent.replace(/\o/g, img);
-	// 	$(this).html(html);
-	// });
-
-	// $('h1, a').each(function() {
-	//     var txt = $(this).text();
-	//     var img = '<img style="height:1em;margin:0 1px; margin-top:-3px;" src="img/catface.png" />'
-	//     var html = txt.replace(/\o/g, img);
-	//     $(this).html(html);
-	// });
 };
 
 $('a').meowify();
