@@ -65,6 +65,14 @@ body {
   padding: 30px;
 }
 
+/* national cat day logo */
+.ncd {
+  position: absolute;
+  width: 100px;
+  right: 10px;
+  bottom: 10px;
+}
+
 
 /*
  * Header
@@ -136,6 +144,7 @@ body {
   font-size: .8em;
   text-shadow: none;
 }
+
 
 /*
  * Affix and center
