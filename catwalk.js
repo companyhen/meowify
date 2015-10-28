@@ -3,7 +3,7 @@ $(document).ready(animateCat());
 
 
 function animateCat() {
-    var $newdiv1 = $('<div id="catBalloon" style="height: 25px; display: none;"><img src="img/balloon.png" /></div>');
+    var $newdiv1 = $('<div id="catBalloon" style="height: 25px; display: none;"><a href=""><img src="img/balloon.png" /></a></div>');
     $('body').append($newdiv1);
     moveCat(500);
 }

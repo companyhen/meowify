@@ -58,6 +58,8 @@ body {
 }
 .cover-heading {
   font-size: 68px;
+  font-weight: 800;
+  color: #111;
 }
 
 /* Padding for spacing */
