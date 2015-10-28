@@ -69,10 +69,18 @@ body {
 .ncd {
   position: absolute;
   width: 100px;
-  right: 10px;
+  left: 15px;
   bottom: 10px;
 }
 
+
+/*cat images*/
+#greetingCat {
+  width: 200px;
+  position: fixed;
+  right: 1%;
+  bottom: 0px;
+}
 
 /*
  * Header
@@ -145,6 +153,10 @@ body {
   text-shadow: none;
 }
 
+.copyright {
+  
+}
+
 
 /*
  * Affix and center
@@ -172,11 +184,18 @@ body {
   }
 }
 
+
 @media (min-width: 992px) {
   .masthead,
   .mastfoot,
   .cover-container {
     width: 725px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #greetingCat {
+    width:100px;
   }
 }
 
