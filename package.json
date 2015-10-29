@@ -1,0 +1,24 @@
+{
+  "name": "meowify",
+  "version": "1.0.0",
+  "description": "Meowify is a jQuery plugin created in recognition of National Cat Day (October 29). Just include it in your template and get meowifed.",
+  "main": "meowify.js",
+  "scripts": {
+    "test": "meow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/companyhen/meowify.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "meow"
+  ],
+  "author": "spurkyhen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/companyhen/meowify/issues"
+  },
+  "homepage": "https://github.com/companyhen/meowify#readme"
+}

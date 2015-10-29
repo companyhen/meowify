@@ -1,9 +1,8 @@
 # meowify
-Meowify your website
 
 Meowify is a jQuery plugin created in recognition of National Cat Day (October 29). Just include it in your template and get meowifed.
 
-DEMO
+[DEMO](http://meowify.producergenius.com)
 
 Include the script:
 
